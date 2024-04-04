@@ -1,0 +1,2866 @@
+
+<scene version="0.5.0">
+    <integrator type="path">
+        <integer name="maxDepth" value="-1"/>
+    </integrator>
+    <sensor type="perspective">
+        <float name="farClip" value="100"/>
+        <float name="nearClip" value="0.1"/>
+        <transform name="toWorld">
+            <lookat origin="3,3,3" target="0,0,0" up="0,0,1"/>
+        </transform>
+        <float name="fov" value="25"/>
+        
+        <sampler type="ldsampler">
+            <integer name="sampleCount" value="256"/>
+        </sampler>
+        <film type="ldrfilm">
+            <integer name="width" value="1600"/>
+            <integer name="height" value="1200"/>
+            <rfilter type="gaussian"/>
+            <boolean name="banner" value="false"/>
+        </film>
+    </sensor>
+    
+    <bsdf type="roughplastic" id="surfaceMaterial">
+        <string name="distribution" value="ggx"/>
+        <float name="alpha" value="0.05"/>
+        <float name="intIOR" value="1.46"/>
+        <rgb name="diffuseReflectance" value="1,1,1"/> <!-- default 0.5 -->
+    </bsdf>
+    
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.05589582026004791" y="-0.7096661329269409" z="-0.16748833656311035"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8589136366550584,0.001545098209684791,0.5121181284035011"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.05817071348428726" y="0.4018780291080475" z="-0.2246198058128357"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5094980067958536,0.8232339087358052,0.25039511292878763"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3712407648563385" y="-0.6659287810325623" z="-0.2829393148422241"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9706155838436322,0.0011140612595229977,0.24063280588355976"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.34316667914390564" y="-0.15591473877429962" z="0.12894505262374878"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2139735929670912,0.46944845157643217,0.8566407956811558"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2762313485145569" y="-0.33027103543281555" z="-0.0820537805557251"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4451659337179673,0.3376592408675695,0.829345240845902"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.18247155845165253" y="0.27401018142700195" z="0.1276085376739502"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5653178879639511,0.6411429100717683,0.518990803784308"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.057747311890125275" y="-0.32481253147125244" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6496289202161364,0.25733443589031185,0.715374904594669"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.42186763882637024" y="-0.2717759311199188" z="0.06275701522827148"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.12781319694028997,0.3733414352787948,0.9188470816147114"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2909162640571594" y="-0.2979515492916107" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8320586809053484,0.21255874359316748,0.512344739459815"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3752329647541046" y="-0.6763826608657837" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7226203822755655,0.0008256320446963335,0.6912446031989271"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.41543257236480713" y="0.43721187114715576" z="-0.4904590845108032"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6987312771483001,0.7153549780226015,0.00646975679518293"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1446942389011383" y="0.43885475397109985" z="-0.14245271682739258"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5402248876258687,0.786718219827037,0.298716443105825"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.4706701636314392" y="-0.05261049047112465" z="0.25102007389068604"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.03356750928223954,0.5120298430980996,0.8583115180967352"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.34178659319877625" y="0.10338445752859116" z="0.07464110851287842"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.18670354259830665,0.7120383667035359,0.6768627272375125"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3724583089351654" y="0.6678905487060547" z="0.32541966438293457"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5584489927913086,0.6400867377524263,0.5276586876038616"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.19245432317256927" y="0.1352185755968094" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.35866348103814494,0.7407995712828145,0.5679581873314254"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.016593119129538536" y="-0.17660212516784668" z="-0.1945388913154602"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7363964350005098,0.4926471912942331,0.46370145075085006"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1699330061674118" y="0.262984961271286" z="0.2449800968170166"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5322351519294922,0.606161232606387,0.5910112546607688"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1699330061674118" y="0.262984961271286" z="0.2449800968170166"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5322351519294922,0.606161232606387,0.5910112546607688"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3430156111717224" y="-0.4177052676677704" z="-0.12201619148254395"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3768999241620717,0.19757938102293812,0.90493581836571"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2863239049911499" y="0.6227485537528992" z="0.034822046756744385"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5699792056622732,0.7248656718234814,0.38690239457064246"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.32859641313552856" y="0.3774780333042145" z="0.21953970193862915"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1494395962519543,0.7650362831708125,0.6264082474746332"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.023264773190021515" y="0.6281803250312805" z="0.23020386695861816"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.38942942847251616,0.7442301649667833,0.542647382554347"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.5212637782096863" y="0.392253577709198" z="0.1790618896484375"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6658095561260137,0.5940709585264088,0.4514170258273328"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.39303871989250183" y="-0.5749487280845642" z="-0.11654341220855713"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9192708129534684,0.001029373970553174,0.3936243295848189"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4676327705383301" y="0.39321109652519226" z="-0.20285019278526306"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7169015921620023,0.6617639219467845,0.21936412369664332"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.057747311890125275" y="-0.32481253147125244" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6496289202161364,0.25733443589031185,0.715374904594669"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.13926172256469727" y="0.5091553330421448" z="0.016432344913482666"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.49404592807723025,0.772838276778303,0.39829589364773965"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1513032615184784" y="-0.3478989601135254" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7872147322450412,0.18384090248414386,0.5886386734748098"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.08839934319257736" y="0.5545112490653992" z="-0.23260661959648132"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4942709306978893,0.8400263127692161,0.22372313452657802"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.46235427260398865" y="-0.06566675007343292" z="0.13877463340759277"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.04873313770013317,0.5622529710678502,0.8255281205478558"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11539648473262787" y="-0.6128544211387634" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5922562264257843,0.0009623978055108695,0.8057491148306364"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.42828190326690674" y="-0.29137083888053894" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8684969104238897,0.19519262545020397,0.4556456469165647"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.024178417399525642" y="0.3206368088722229" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4814475173169627,0.753738691132162,0.4473100418721988"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.30136650800704956" y="0.16002267599105835" z="-0.14295512437820435"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7301642296779246,0.6013789495439384,0.32435097771437676"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.38475146889686584" y="0.4371758997440338" z="-0.63453608751297"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6864760444091882,0.7271520050416559,0.0007758970383684207"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.14214007556438446" y="-0.6282253265380859" z="0.227658212184906"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.44183507305163405,0.0012346592699600454,0.8970954485660622"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.24292992055416107" y="0.413627564907074" z="-0.10018754005432129"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2497120742089965,0.8874771999108777,0.3873346093916584"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2996959388256073" y="0.4156873822212219" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.159375519545924,0.7285830922623918,0.6661577301501783"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4676327705383301" y="0.39321109652519226" z="-0.20285019278526306"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7169015921620023,0.6617639219467845,0.21936412369664332"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.22398066520690918" y="0.2834711968898773" z="-0.10723555088043213"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6370828677171297,0.6894328825007019,0.3446849578790628"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3572198450565338" y="-0.06319598108530045" z="-0.12471950054168701"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2409224949690446,0.7370486051867876,0.6314393913988114"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3559422492980957" y="-0.0716249942779541" z="0.2778618335723877"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.16029471903049292,0.4766578045772128,0.864351167284783"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.18733102083206177" y="0.4461078941822052" z="-0.2196056842803955"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.30214046806321465,0.9142495771317832,0.26992378234030623"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.13352450728416443" y="0.1012003943324089" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6335324276556187,0.6012079105853506,0.4870171571499053"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.28809458017349243" y="0.2236369103193283" z="0.1658179759979248"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6256609954919339,0.5744886477780736,0.5277415203432101"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.28657588362693787" y="0.18756693601608276" z="-0.5473889708518982"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2964512226406141,0.955046984816546,0.0013890240132114304"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.24711544811725616" y="0.14817489683628082" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.67765971575117,0.5879171919868816,0.4417359901732072"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.08640220016241074" y="0.3372498154640198" z="-0.22061392664909363"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.42445115106965675,0.8592203537980799,0.2856249358419984"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2952004373073578" y="-0.6794835329055786" z="-0.4562132954597473"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9985591481144257,0.0012557326445841307,0.053647468276869524"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.37600886821746826" y="-0.6646323204040527" z="-0.052771925926208496"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8910823370346665,0.001017206981988516,0.4538405379808999"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.34178659319877625" y="0.10338445752859116" z="0.07464110851287842"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.18670354259830665,0.7120383667035359,0.6768627272375125"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11678586900234222" y="0.2431577444076538" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5702460266978717,0.6870824580395952,0.4502634394324706"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.44480934739112854" y="-0.21065868437290192" z="0.21197128295898438"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.07172138852214294,0.3760049923791511,0.9238378040188712"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.42157822847366333" y="0.05461809039115906" z="-0.20272892713546753"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.12376549414523881,0.87530006888582,0.4674739477954506"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.1956542432308197" y="0.3741459846496582" z="0.22813087701797485"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.25857251185102004,0.742675453651123,0.6177162994928602"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.033849749714136124" y="-0.5588045716285706" z="-0.026998281478881836"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7027306382469682,0.001507519598704544,0.7114544099615014"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3010021448135376" y="-0.24594669044017792" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3406164445264539,0.43485260150850114,0.8335968166202687"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2691543698310852" y="0.6360405683517456" z="0.1453113555908203"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5429720184635894,0.705933736790486,0.4547954995672192"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.406464546918869" y="0.2270841896533966" z="0.18089747428894043"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.09355543032908438,0.7272394798739625,0.6799780293278513"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1569983959197998" y="0.6645951867103577" z="0.2513309717178345"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4652027074179977,0.7080728207360574,0.5312431849406144"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.14214007556438446" y="-0.6282253265380859" z="0.227658212184906"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.44183507305163405,0.0012346592699600454,0.8970954485660622"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2439395636320114" y="-0.7382203936576843" z="0.09594827890396118"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7810056095728732,0.001049824001508806,0.6245231266216412"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.08640220016241074" y="0.3372498154640198" z="-0.22061392664909363"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.42445115106965675,0.8592203537980799,0.2856249358419984"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.046944066882133484" y="-0.6824128031730652" z="-0.02149796485900879"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6883416318960086,0.0015193303554352315,0.7253850628693775"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4437074363231659" y="0.5640185475349426" z="-0.021658003330230713"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6483891062497313,0.6870658016386502,0.32792095254087317"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.46235427260398865" y="-0.06566675007343292" z="0.13877463340759277"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.04873313770013317,0.5622529710678502,0.8255281205478558"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.061569828540086746" y="0.6016489267349243" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.31864336750125377,0.7267824804123639,0.608484700311448"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.057747311890125275" y="-0.32481253147125244" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6496289202161364,0.25733443589031185,0.715374904594669"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.30136650800704956" y="0.16002267599105835" z="-0.14295512437820435"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7301642296779246,0.6013789495439384,0.32435097771437676"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.28645968437194824" y="0.4024876654148102" z="0.10091465711593628"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1933379650189591,0.8171062601121742,0.5431001666063301"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.1278831660747528" y="0.226201593875885" z="-0.21471107006072998"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.43065410851274666,0.8404395380671764,0.32893528493386426"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2160162776708603" y="-0.4140166938304901" z="-0.05316644906997681"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.530324735065103,0.16056932309492455,0.8324500993206536"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.02379745803773403" y="-0.7066760063171387" z="0.30554676055908203"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5456353234990143,0.0010416914307738148,0.8380220812300169"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2896665632724762" y="0.011901780031621456" z="-0.2029329538345337"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.33513113014283175,0.8156298148941686,0.47163029023260644"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.10115247964859009" y="-0.0207400880753994" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5041239796489614,0.605761354295922,0.6155584414046029"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.42470163106918335" y="0.44983625411987305" z="0.3386526107788086"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5897102121830531,0.605739321891906,0.5341551643117871"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3766697347164154" y="-0.375316321849823" z="0.1652267575263977"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1795393076351688,0.18150955239588343,0.9668608583467065"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.406464546918869" y="0.2270841896533966" z="0.18089747428894043"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.09355543032908438,0.7272394798739625,0.6799780293278513"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.29746726155281067" y="0.22481268644332886" z="0.022297143936157227"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.22123745327875943,0.7917520598511586,0.5693704110578423"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.07853766530752182" y="-0.44311195611953735" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6518481798285567,0.08798501029645733,0.753228111807658"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2547759413719177" y="-0.34271886944770813" z="-0.6315625309944153"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8417396899493185,0.5398726813617936,0.003432533066528918"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.03763803467154503" y="0.024422168731689453" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.600627396022643,0.5858631668689351,0.5440690037608845"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.4460926353931427" y="-0.15091004967689514" z="0.07547539472579956"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.0799424169835605,0.5176861190864103,0.851827618753981"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.1581544578075409" y="-0.28800681233406067" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5411962226741049,0.33561915613003973,0.7710164917833086"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.5150489211082458" y="0.5039917230606079" z="0.19517731666564941"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6347712854408821,0.6347712854408821,0.4406028033949177"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3724583089351654" y="0.6678905487060547" z="0.32541966438293457"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5584489927913086,0.6400867377524263,0.5276586876038616"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.27383992075920105" y="0.1353038251399994" z="-0.20934933423995972"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3081590714382215,0.8656463045710457,0.39458137572980495"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.15751148760318756" y="-0.016031337901949883" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6916474235046491,0.5090947983544946,0.5122951569630314"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.07060183584690094" y="0.6551216840744019" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.40082552375104724,0.702460978163753,0.5881219887633196"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.19245432317256927" y="0.1352185755968094" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.35866348103814494,0.7407995712828145,0.5679581873314254"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11539648473262787" y="-0.6128544211387634" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5922562264257843,0.0009623978055108695,0.8057491148306364"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2909162640571594" y="-0.2979515492916107" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8320586809053484,0.21255874359316748,0.512344739459815"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.205422043800354" y="-0.6289474964141846" z="0.196560800075531"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7120986036844482,0.001009464631765865,0.702078741746121"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.19245432317256927" y="0.1352185755968094" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.35866348103814494,0.7407995712828145,0.5679581873314254"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.03859158977866173" y="-0.5598160624504089" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.48266638477603124,0.001046071926917187,0.8758036690610287"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2359578162431717" y="-0.5572829842567444" z="0.13392072916030884"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.38505250250184236,0.00145829918925553,0.9228935169782824"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.005654391832649708" y="0.1526823341846466" z="-0.21156567335128784"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5784058452541764,0.7465875572014827,0.32871522265895253"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.39211657643318176" y="0.19773508608341217" z="-0.0561450719833374"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.12945154624183575,0.8372267283929496,0.5313131867740872"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2996959388256073" y="0.4156873822212219" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.159375519545924,0.7285830922623918,0.6661577301501783"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.42828190326690674" y="-0.29137083888053894" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8684969104238897,0.19519262545020397,0.4556456469165647"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3176272511482239" y="-0.640717625617981" z="-0.18524181842803955"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9336425178797871,0.0011418926125182824,0.35820433398879004"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4361884593963623" y="-0.1641324758529663" z="-0.018392860889434814"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8475237686065609,0.30405812735738064,0.43503116765911787"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.12700100243091583" y="0.5308928489685059" z="0.05841296911239624"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.30978386970641514,0.8305219899392337,0.4628900282973205"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.15751148760318756" y="-0.016031337901949883" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6916474235046491,0.5090947983544946,0.5122951569630314"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.28581491112709045" y="0.22327683866024017" z="-0.6875"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.28394285722167273,0.9588402872120889,0.0013256891911376481"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.34616875648498535" y="-0.4222410321235657" z="0.0003133416175842285"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.29125526727561585,0.14722437688489715,0.9452488308033304"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1771313101053238" y="0.4138752520084381" z="0.3386526107788086"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4793763407554896,0.6469796443863505,0.5929718911327823"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11300582438707352" y="0.4244607985019684" z="0.08430123329162598"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.48914331092502256,0.7376664263374304,0.4653891541837555"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.08857908844947815" y="-0.660388171672821" z="0.3235349655151367"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.44737489085277965,0.0010873897711391432,0.8943458640917109"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4817664623260498" y="0.3554864525794983" z="-0.009862363338470459"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7057928634190673,0.615010041748381,0.35159505470835134"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.40352821350097656" y="-0.03601834923028946" z="-0.050514817237854004"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8137836031330139,0.41789581543661525,0.403880347024234"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.1762114018201828" y="-0.4565654397010803" z="0.2124198079109192"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4136368913738401,0.055487242605921486,0.9087495188458576"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.17757338285446167" y="0.5390914678573608" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.23999521517819228,0.7443405798903451,0.6231848825349326"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11300582438707352" y="0.4244607985019684" z="0.08430123329162598"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.48914331092502256,0.7376664263374304,0.4653891541837555"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.05076535791158676" y="-0.5491670370101929" z="0.21077072620391846"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5348427487598431,0.0011905643480063174,0.8449507776524907"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.14802899956703186" y="-0.486690491437912" z="0.33745479583740234"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.38783434360471947,0.014665652881996068,0.9216124134071987"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.016593119129538536" y="-0.17660212516784668" z="-0.1945388913154602"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7363964350005098,0.4926471912942331,0.46370145075085006"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.18185670673847198" y="-0.1416807472705841" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.748209171140209,0.3931878185530336,0.5344028214401455"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4384046792984009" y="-0.4074037969112396" z="-0.02668321132659912"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8898131451597018,0.08780147895453569,0.44779846694064934"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11751803010702133" y="0.26829421520233154" z="-0.2180364429950714"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.602489959415399,0.7495968181789213,0.27406287413596897"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.046944066882133484" y="-0.6824128031730652" z="-0.02149796485900879"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6883416318960086,0.0015193303554352315,0.7253850628693775"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.008792557753622532" y="-0.5808776021003723" z="-0.16783863306045532"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8292139162174279,0.0016881135033811536,0.5589288250074032"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1699330061674118" y="0.262984961271286" z="0.2449800968170166"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5322351519294922,0.606161232606387,0.5910112546607688"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.37600886821746826" y="-0.6646323204040527" z="-0.052771925926208496"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8910823370346665,0.001017206981988516,0.4538405379808999"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4276250898838043" y="-0.12164843827486038" z="-0.1653381586074829"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8785158608936043,0.3583213213983206,0.31593624798324554"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.37840932607650757" y="-0.3832630515098572" z="0.3110772371292114"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1469614216843097,0.14109493236293968,0.9790273543665795"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.5203046202659607" y="0.5329834818840027" z="0.3328043222427368"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.609507898903237,0.609507898903237,0.5069519132512698"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.07569646090269089" y="0.5144329071044922" z="-0.22794002294540405"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3789826643202159,0.8931876107526422,0.24204964809463564"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1950279027223587" y="-0.7428320050239563" z="-0.1442747712135315"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8907328622008964,0.0012815785649928297,0.4545253851566278"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.4502316117286682" y="-0.0876159593462944" z="-0.017224907875061035"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.07824382448978133,0.6483333220152108,0.7573254303758281"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11751803010702133" y="0.26829421520233154" z="-0.2180364429950714"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.602489959415399,0.7495968181789213,0.27406287413596897"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.44965723156929016" y="0.06636878103017807" z="0.15456324815750122"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.058116550231747915,0.6538257775342227,0.7544099145828679"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.40352821350097656" y="-0.03601834923028946" z="-0.050514817237854004"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8137836031330139,0.41789581543661525,0.403880347024234"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.19402706623077393" y="-0.4706737995147705" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8180815924988795,0.03456814000813122,0.5740623238907738"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.03334638103842735" y="0.594836950302124" z="0.11349475383758545"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.36975075997330603,0.7923452105570272,0.48525605901060426"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.13352450728416443" y="0.1012003943324089" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6335324276556187,0.6012079105853506,0.4870171571499053"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.38215237855911255" y="-0.3285352885723114" z="-0.18464595079421997"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3126624194412529,0.4549143280814412,0.8338436097826456"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.07853766530752182" y="-0.44311195611953735" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6518481798285567,0.08798501029645733,0.753228111807658"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.06978987157344818" y="0.005886703729629517" z="-0.20432570576667786"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.697475902430758,0.6192524697520213,0.36062964968846045"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.10115247964859009" y="-0.0207400880753994" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5041239796489614,0.605761354295922,0.6155584414046029"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.46235427260398865" y="-0.06566675007343292" z="0.13877463340759277"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.04873313770013317,0.5622529710678502,0.8255281205478558"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.21555040776729584" y="0.5040626525878906" z="0.23062175512313843"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.22395764906190735,0.7873368610023909,0.5744072063732883"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.5387701392173767" y="0.3857983946800232" z="0.3307076692581177"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6359056019186741,0.5632841613475954,0.5275746572982679"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.0648968368768692" y="-0.6711285710334778" z="-0.13477462530136108"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7668533596268491,0.0017624633066844323,0.6418199268892381"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.34178659319877625" y="0.10338445752859116" z="0.07464110851287842"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.18670354259830665,0.7120383667035359,0.6768627272375125"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3430156111717224" y="-0.4177052676677704" z="-0.12201619148254395"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3768999241620717,0.19757938102293812,0.90493581836571"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.020969031378626823" y="0.5284016132354736" z="-0.07286351919174194"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4322024043838288,0.8296124689793993,0.353474515288928"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.209821417927742" y="-0.14665284752845764" z="-0.19516313076019287"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5286159882776809,0.6436896647400979,0.5533793928617067"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4647095501422882" y="0.27413374185562134" z="0.3386526107788086"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6457999777455832,0.5182239081065676,0.5607016763043965"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.399381160736084" y="0.23938561975955963" z="0.17552101612091064"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6684181687106376,0.5495098224274337,0.5012545329403891"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3752329647541046" y="-0.6763826608657837" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7226203822755655,0.0008256320446963335,0.6912446031989271"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.43191760778427124" y="0.11088013648986816" z="0.016141653060913086"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.08489669910195764,0.7617491901667018,0.642285545347212"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.26214882731437683" y="-0.3025769889354706" z="-0.1869024634361267"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5415317676311477,0.4494862520360424,0.7104262480207751"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.22398066520690918" y="0.2834711968898773" z="-0.10723555088043213"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6370828677171297,0.6894328825007019,0.3446849578790628"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3712407648563385" y="-0.6659287810325623" z="-0.2829393148422241"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9706155838436322,0.0011140612595229977,0.24063280588355976"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.26387593150138855" y="0.6655152440071106" z="0.2732211947441101"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5173938483860581,0.677327072433251,0.5230025263813419"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3320651054382324" y="-0.2224583923816681" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.18703507895082505,0.30910798276019263,0.9324538241842236"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.27383992075920105" y="0.1353038251399994" z="-0.20934933423995972"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3081590714382215,0.8656463045710457,0.39458137572980495"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.31787368655204773" y="-0.46772778034210205" z="0.12340152263641357"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2805216204974022,0.04970756385550415,0.9585597417631635"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.03362606093287468" y="0.11060891300439835" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5126760272570182,0.6712307989442879,0.5353620322964396"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.28645968437194824" y="0.4024876654148102" z="0.10091465711593628"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1933379650189591,0.8171062601121742,0.5431001666063301"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.19223910570144653" y="-0.5985205769538879" z="0.33238446712493896"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.34717989287224804,0.0011280831947916518,0.9377978723656394"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.044158145785331726" y="0.04073894023895264" z="-0.20557722449302673"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5953508791827125,0.7062304623918615,0.3831394845825068"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.03362606093287468" y="0.11060891300439835" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5126760272570182,0.6712307989442879,0.5353620322964396"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.292399138212204" y="-0.2969074845314026" z="0.18630588054656982"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2789416612236739,0.27288404854895226,0.9207202863417913"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2863239049911499" y="0.6227485537528992" z="0.034822046756744385"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5699792056622732,0.7248656718234814,0.38690239457064246"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.205422043800354" y="-0.6289474964141846" z="0.196560800075531"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7120986036844482,0.001009464631765865,0.702078741746121"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2706466615200043" y="-0.5141262412071228" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2642082137183147,0.0011519702109823837,0.9644649774711419"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.255060076713562" y="-0.5134490728378296" z="-0.17609989643096924"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6044320945859388,0.002467674875030899,0.7966528438505481"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3127289116382599" y="-0.13104353845119476" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.799318173835519,0.36286835726753364,0.47897495996159617"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.1762114018201828" y="-0.4565654397010803" z="0.2124198079109192"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4136368913738401,0.055487242605921486,0.9087495188458576"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.14214007556438446" y="-0.6282253265380859" z="0.227658212184906"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.44183507305163405,0.0012346592699600454,0.8970954485660622"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3127289116382599" y="-0.13104353845119476" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.799318173835519,0.36286835726753364,0.47897495996159617"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2691543698310852" y="0.6360405683517456" z="0.1453113555908203"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5429720184635894,0.705933736790486,0.4547954995672192"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.14969447255134583" y="0.42327454686164856" z="0.1182565689086914"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3008188361267567,0.7928461096095297,0.5300029002829864"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.06333459913730621" y="0.4803704619407654" z="0.23727130889892578"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.33551915320575776,0.7532840169348194,0.5656766635301778"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3712407648563385" y="-0.6659287810325623" z="-0.2829393148422241"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9706155838436322,0.0011140612595229977,0.24063280588355976"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.020969031378626823" y="0.5284016132354736" z="-0.07286351919174194"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4322024043838288,0.8296124689793993,0.353474515288928"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.30136650800704956" y="0.16002267599105835" z="-0.14295512437820435"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7301642296779246,0.6013789495439384,0.32435097771437676"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.06978987157344818" y="0.005886703729629517" z="-0.20432570576667786"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.697475902430758,0.6192524697520213,0.36062964968846045"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.05589582026004791" y="-0.7096661329269409" z="-0.16748833656311035"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8589136366550584,0.001545098209684791,0.5121181284035011"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.15656417608261108" y="-0.6141263246536255" z="-0.17120879888534546"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7234576303762609,0.0021065293134658065,0.6903655695243043"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.16949133574962616" y="0.24039272964000702" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.34943716505082373,0.7827956252113667,0.5149025896528283"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.05274047702550888" y="0.6018546223640442" z="0.013036847114562988"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.44146719936956763,0.7986880239805452,0.40890604327992314"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.01221469882875681" y="0.5094954967498779" z="0.03572678565979004"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.39515273548249574,0.8100956189817051,0.43312746824387455"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.21611131727695465" y="0.20886549353599548" z="-0.42518916726112366"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3700555202058403,0.9240227065421447,0.09612985883540229"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.43402478098869324" y="0.27786514163017273" z="0.06784701347351074"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6964288824439872,0.5799929105780255,0.4226050583902774"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3429175019264221" y="0.09592271596193314" z="0.2293519377708435"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1646490039527227,0.6246277135850921,0.7633681450773516"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3176272511482239" y="-0.640717625617981" z="-0.18524181842803955"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9336425178797871,0.0011418926125182824,0.35820433398879004"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.28645968437194824" y="0.4024876654148102" z="0.10091465711593628"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1933379650189591,0.8171062601121742,0.5431001666063301"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.03763803467154503" y="0.024422168731689453" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.600627396022643,0.5858631668689351,0.5440690037608845"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2695464491844177" y="0.025941120460629463" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.30607590919769484,0.6985264755510848,0.6468216916299145"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.31787368655204773" y="-0.46772778034210205" z="0.12340152263641357"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2805216204974022,0.04970756385550415,0.9585597417631635"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.32799580693244934" y="0.3141186833381653" z="0.3386526107788086"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5783086665663706,0.5686162734716289,0.5850082219229609"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.43220311403274536" y="-0.4401452839374542" z="-0.1623854637145996"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9388687734306947,0.06028270342348467,0.3389563717422922"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.24292992055416107" y="0.413627564907074" z="-0.10018754005432129"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2497120742089965,0.8874771999108777,0.3873346093916584"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.33672261238098145" y="-0.19843097031116486" z="0.23391544818878174"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.20179648975621867,0.37271279567745463,0.9057391173292474"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.30136650800704956" y="0.16002267599105835" z="-0.14295512437820435"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7301642296779246,0.6013789495439384,0.32435097771437676"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.1762114018201828" y="-0.4565654397010803" z="0.2124198079109192"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4136368913738401,0.055487242605921486,0.9087495188458576"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3071000576019287" y="-0.7350359559059143" z="-0.11343991756439209"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.9023550215667808,0.0011180212577953166,0.43099207078748136"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.21555040776729584" y="0.5040626525878906" z="0.23062175512313843"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.22395764906190735,0.7873368610023909,0.5744072063732883"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.34178659319877625" y="0.10338445752859116" z="0.07464110851287842"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.18670354259830665,0.7120383667035359,0.6768627272375125"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.023603998124599457" y="-0.06834830343723297" z="-0.20006871223449707"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6719824006730983,0.6088681310695143,0.4215676127900913"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.4325750172138214" y="0.051938317716121674" z="-0.07846927642822266"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.0967195859555347,0.7917428133691813,0.6031489361433409"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3644132912158966" y="0.46285751461982727" z="-0.23531711101531982"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6545957211559368,0.7291447454103976,0.1996306140970005"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2706466615200043" y="-0.5141262412071228" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2642082137183147,0.0011519702109823837,0.9644649774711419"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.28581491112709045" y="0.22327683866024017" z="-0.6875"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.28394285722167273,0.9588402872120889,0.0013256891911376481"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2547759413719177" y="-0.34271886944770813" z="-0.6315625309944153"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8417396899493185,0.5398726813617936,0.003432533066528918"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3752329647541046" y="-0.6763826608657837" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7226203822755655,0.0008256320446963335,0.6912446031989271"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.32799580693244934" y="0.3141186833381653" z="0.3386526107788086"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5783086665663706,0.5686162734716289,0.5850082219229609"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.09863876551389694" y="0.4149564206600189" z="0.19525796175003052"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4622151634301803,0.7064472865264954,0.5359938190451112"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2996959388256073" y="0.4156873822212219" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.159375519545924,0.7285830922623918,0.6661577301501783"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.09000660479068756" y="-0.6057541370391846" z="-0.1424649953842163"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8559094709096424,0.001450677778790777,0.5171236536276003"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.08839934319257736" y="0.5545112490653992" z="-0.23260661959648132"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.4942709306978893,0.8400263127692161,0.22372313452657802"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.38475146889686584" y="0.4371758997440338" z="-0.63453608751297"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6864760444091882,0.7271520050416559,0.0007758970383684207"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3535785973072052" y="0.031622264534235" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.14605548640013183,0.5302937070654639,0.8351385388899191"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.09000660479068756" y="-0.6057541370391846" z="-0.1424649953842163"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8559094709096424,0.001450677778790777,0.5171236536276003"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3796464502811432" y="0.3206419348716736" z="0.3360166549682617"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.10226358657847223,0.6972938293279572,0.7094529402583802"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.05408111587166786" y="-0.4655008614063263" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7502834999591131,0.046715424345252575,0.6594636751310465"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.27383992075920105" y="0.1353038251399994" z="-0.20934933423995972"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3081590714382215,0.8656463045710457,0.39458137572980495"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.32859641313552856" y="0.3774780333042145" z="0.21953970193862915"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1494395962519543,0.7650362831708125,0.6264082474746332"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.009290145710110664" y="-0.5727971196174622" z="0.09513938426971436"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.6368442661753203,0.0012978020730741253,0.7709913724221542"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.18247155845165253" y="0.27401018142700195" z="0.1276085376739502"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5653178879639511,0.6411429100717683,0.518990803784308"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2863239049911499" y="0.6227485537528992" z="0.034822046756744385"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5699792056622732,0.7248656718234814,0.38690239457064246"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2896665632724762" y="0.011901780031621456" z="-0.2029329538345337"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.33513113014283175,0.8156298148941686,0.47163029023260644"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.5203046202659607" y="0.5329834818840027" z="0.3328043222427368"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.609507898903237,0.609507898903237,0.5069519132512698"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.13926172256469727" y="0.5091553330421448" z="0.016432344913482666"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.49404592807723025,0.772838276778303,0.39829589364773965"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.26387593150138855" y="0.6655152440071106" z="0.2732211947441101"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5173938483860581,0.677327072433251,0.5230025263813419"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.18185670673847198" y="-0.1416807472705841" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.748209171140209,0.3931878185530336,0.5344028214401455"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11751803010702133" y="0.26829421520233154" z="-0.2180364429950714"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.602489959415399,0.7495968181789213,0.27406287413596897"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1513032615184784" y="-0.3478989601135254" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7872147322450412,0.18384090248414386,0.5886386734748098"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.4325750172138214" y="0.051938317716121674" z="-0.07846927642822266"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.0967195859555347,0.7917428133691813,0.6031489361433409"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.24711544811725616" y="0.14817489683628082" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.67765971575117,0.5879171919868816,0.4417359901732072"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.05015936866402626" y="-0.7147457599639893" z="0.02899700403213501"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7215312440809671,0.001311494968872547,0.6923806350526557"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2271866351366043" y="0.23692074418067932" z="-0.2765069305896759"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.33405486019066394,0.9023456614456596,0.2723594273257143"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3010021448135376" y="-0.24594669044017792" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3406164445264539,0.43485260150850114,0.8335968166202687"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.1513032615184784" y="-0.3478989601135254" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7872147322450412,0.18384090248414386,0.5886386734748098"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.2611251771450043" y="0.5762520432472229" z="0.3386526107788086"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5039718645508299,0.6621405777709763,0.554600951144404"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.3635558485984802" y="0.6504413485527039" z="0.20867431163787842"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5761598726241693,0.6671946852762978,0.47211339010534636"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.11539648473262787" y="-0.6128544211387634" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5922562264257843,0.0009623978055108695,0.8057491148306364"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.18733102083206177" y="0.4461078941822052" z="-0.2196056842803955"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.30214046806321465,0.9142495771317832,0.26992378234030623"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2443362921476364" y="-0.38374456763267517" z="0.3122659921646118"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.29782207806316535,0.13542569160329246,0.9449666088661057"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.05589582026004791" y="-0.7096661329269409" z="-0.16748833656311035"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8589136366550584,0.001545098209684791,0.5121181284035011"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.16949133574962616" y="0.24039272964000702" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.34943716505082373,0.7827956252113667,0.5149025896528283"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.19312679767608643" y="0.5177513957023621" z="-0.23531711101531982"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5567473310053895,0.8032402337812511,0.21174875738340515"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.09000660479068756" y="-0.6057541370391846" z="-0.1424649953842163"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8559094709096424,0.001450677778790777,0.5171236536276003"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.26604822278022766" y="-0.35128483176231384" z="0.06019604206085205"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3748738380870945,0.2382945176204361,0.8959270776072651"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.28645968437194824" y="0.4024876654148102" z="0.10091465711593628"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1933379650189591,0.8171062601121742,0.5431001666063301"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4817664623260498" y="0.3554864525794983" z="-0.009862363338470459"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7057928634190673,0.615010041748381,0.35159505470835134"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.044158145785331726" y="0.04073894023895264" z="-0.20557722449302673"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.5953508791827125,0.7062304623918615,0.3831394845825068"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.4817664623260498" y="0.3554864525794983" z="-0.009862363338470459"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.7057928634190673,0.615010041748381,0.35159505470835134"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.21611131727695465" y="0.20886549353599548" z="-0.42518916726112366"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.3700555202058403,0.9240227065421447,0.09612985883540229"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.3766697347164154" y="-0.375316321849823" z="0.1652267575263977"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.1795393076351688,0.18150955239588343,0.9668608583467065"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="0.42828190326690674" y="-0.29137083888053894" z="-0.011924266815185547"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.8684969104238897,0.19519262545020397,0.4556456469165647"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="0.02"/>
+        <transform name="toWorld">
+            <translate x="-0.2706466615200043" y="-0.5141262412071228" z="0.33829545974731445"/>
+            <scale value="0.7"/>
+        </transform>
+        <bsdf type="diffuse">
+            <rgb name="reflectance" value="0.2642082137183147,0.0011519702109823837,0.9644649774711419"/>
+        </bsdf>
+    </shape>
+
+    <shape type="rectangle">
+        <ref name="bsdf" id="surfaceMaterial"/>
+        <transform name="toWorld">
+            <scale x="10" y="10" z="10"/>
+            <translate x="0" y="0" z="-0.5"/>
+        </transform>
+    </shape>
+    
+    <shape type="rectangle">
+        <transform name="toWorld">
+            <scale x="10" y="10" z="1"/>
+            <lookat origin="-4,4,20" target="0,0,0" up="0,0,1"/>
+        </transform>
+        <emitter type="area">
+            <rgb name="radiance" value="6,6,6"/>
+        </emitter>
+    </shape>
+</scene>
