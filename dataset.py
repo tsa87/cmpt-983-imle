@@ -16,7 +16,65 @@ import numpy as np
 import torch
 import torch.utils.data as data
 
-from utils import downsample_point_cloud, positional_encoding
+from utils import downsample_point_cloud, farthest_point_sampling, positional_encoding
+
+shapenetcore_cat2id ={
+'chair': 14,
+ 'train': 22,
+ 'airplane': 0,
+ 'table': 18,
+ 'speaker': 33,
+ 'sofa': 48,
+ 'monitor': 17,
+ 'car': 13,
+ 'jar': 29,
+ 'remote_control': 44,
+ 'lamp': 31,
+ 'bookshelf': 54,
+ 'pot': 42,
+ 'telephone': 19,
+ 'bathtub': 3,
+ 'cabinet': 9,
+ 'can': 10,
+ 'vessel': 50,
+ 'helmet': 28,
+ 'rifle': 45,
+ 'earphone': 24,
+ 'pistol': 41,
+ 'stove': 49,
+ 'bench': 5,
+ 'clock': 15,
+ 'basket': 2,
+ 'bus': 8,
+ 'faucet': 25,
+ 'piano': 39,
+ 'guitar': 27,
+ 'bottle': 6,
+ 'printer': 43,
+ 'mug': 38,
+ 'file': 26,
+ 'bowl': 7,
+ 'laptop': 32,
+ 'tower': 21,
+ 'motorcycle': 37,
+ 'microwave': 36,
+ 'mailbox': 34,
+ 'knife': 30,
+ 'keyboard': 23,
+ 'tin_can': 20,
+ 'birdhouse': 53,
+ 'pillow': 40,
+ 'dishwasher': 16,
+ 'washer': 51,
+ 'skateboard': 47,
+ 'bed': 4,
+ 'cap': 12,
+ 'rocket': 46,
+ 'camera': 11,
+ 'cellphone': 52,
+ 'bag': 1,
+ 'microphone': 35
+}
 
 shapenetpart_cat2id = {
     "airplane": 0,
@@ -247,26 +305,77 @@ class Dataset(data.Dataset):
         return self.data.shape[0]
 
 
+class RobustAEDataset(Dataset):
+    def __getitem__(self, index):
+        pc, lb, n, f = super(RobustAEDataset, self).__getitem__(index)
+        pc = pc.clone().detach()
+        
+        pc = downsample_point_cloud(pc, 256)
+        
+        enc_pc = positional_encoding(pc).transpose(1, 0)
+        
+        pc = pc.transpose(1, 0)
+
+        return {
+            "points": pc,
+            "points_encoded": enc_pc,
+            "label": lb,
+        }
+
+
 class AEDataset(Dataset):
     """Custom class for training autoencoder.
 
     Input is downsampled point cloud with positional encoding.
     """
+    def __init__(
+        self,
+        root,
+        dataset_name="modelnet40",
+        class_choice=None,
+        num_points=2048,
+        split="train",
+        load_name=True,
+        load_file=True,
+        segmentation=False,
+        random_rotate=False,
+        random_jitter=False,
+        random_translate=False,
+        num_sample_points=256,
+    ):
+        super(AEDataset, self).__init__(
+            root,
+            dataset_name,
+            class_choice,
+            num_points,
+            split,
+            load_name,
+            load_file,
+            segmentation,
+            random_rotate,
+            random_jitter,
+            random_translate,
+        )
+        data = []
+        for i in range(len(self.data)):
+            d = farthest_point_sampling(self.data[i], num_sample_points)
+            data.append(d)
+        self.data = np.array(data)
+        
 
     def __getitem__(self, index):
-        ps, lb, n, f = super(AEDataset, self).__getitem__(index)
-
-        ps = downsample_point_cloud(ps, self.num_points)
-
-        enc_ps = positional_encoding(ps).transpose(1, 0)
-        ps = ps.transpose(1, 0)
+        pc, lb, n, f = super(AEDataset, self).__getitem__(index)
+        pc = pc.clone().detach()
+        enc_pc = positional_encoding(pc).transpose(1, 0)
+        
+        pc = pc.transpose(1, 0)
 
         return {
-            "points": ps,
-            "points_encoded": enc_ps,
+            "points": pc,
+            "points_encoded": enc_pc,
             "label": lb,
         }
-
+    
 
 if __name__ == "__main__":
     root = os.getcwd()
